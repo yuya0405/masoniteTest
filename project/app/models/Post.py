@@ -5,4 +5,4 @@ from masoniteorm.models import Model
 
 class Post(Model):
     """Post Model."""
-    pass
+    __fillable__ = ['post', 'user_id']
