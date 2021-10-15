@@ -6,7 +6,10 @@ ROUTES = [
     Get("/", "WelcomeController@show").name("welcome"),
 
     # Blog Routes
-    Get('/blog', 'BlogController@show')
+    Get('/blog', 'BlogController@show'),
+
+    # Gantt Routes
+    Get('/gantt', 'GanttController@show')
 ]
 
 from masonite.auth import Auth 
