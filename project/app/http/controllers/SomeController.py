@@ -17,4 +17,4 @@ class SomeController(Controller):
         self.request = request
 
     def show(self, view: View):
-        pass
+        return view('some', {'world': 'world'})
