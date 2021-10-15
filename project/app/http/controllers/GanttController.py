@@ -17,4 +17,4 @@ class GanttController(Controller):
         self.request = request
 
     def show(self, view: View):
-        return view.render('gantt')
+        return view.render('./gantt/example/timeline-scale')
