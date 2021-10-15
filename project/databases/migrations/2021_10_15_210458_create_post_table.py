@@ -9,7 +9,11 @@ class CreatePostTable(Migration):
         Run the migrations.
         """
         with self.schema.create("posts") as table:
-            table.increments("id")
+            table.increments('id')
+            table.long_text('post')
+
+            table.integer('user_id').unsigned()
+            table.foreign('user_id').references('id').on('users')
 
             table.timestamps()
 
